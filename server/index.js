@@ -7,26 +7,6 @@ const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 const path = require ('path')
 
-const fs = require('fs');
-const path = './package.json';
-
-if (!fs.existsSync(path)) {
-  console.error('Error: package.json file is missing!');
-  process.exit(1);
-} else {
-  console.log('package.json file found. Running build...');
-  const { exec } = require('child_process');
-  exec('npm run build', (err, stdout, stderr) => {
-    if (err) {
-      console.error(`Error during build: ${stderr}`);
-      process.exit(1);
-    } else {
-      console.log(`Build successful: ${stdout}`);
-    }
-  });
-}
-
-
 
 // const app = express()
 app.use(cors({
