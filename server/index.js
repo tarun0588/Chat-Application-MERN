@@ -21,21 +21,21 @@ const PORT = process.env.PORT || 8080
 
 
 // *************Deployment section***************
-const __dirname1 = path.resolve();
-if(process.env.NODE_ENV==='production'){
-    app.use(express.static(path.join(__dirname1,'/client/build')))
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname1,'client','build','index.html'))
-    })
+// const __dirname1 = path.resolve();
+// if(process.env.NODE_ENV==='production'){
+//     app.use(express.static(path.join(__dirname1,'/client/build')))
+//     app.get('*', (req, res) => {
+//         res.sendFile(path.resolve(__dirname1,'client','build','index.html'))
+//     })
 
-} else {
-    app.get('/',(request,response)=>{
-        response.json({
-            message : "Server running at " + PORT
-        })
-    })
+// } else {
+//     app.get('/',(request,response)=>{
+//         response.json({
+//             message : "Server running at " + PORT
+//         })
+//     })
     
-}
+// }
 
 // *************Deployment section***************
 //api endpoints
