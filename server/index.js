@@ -5,7 +5,7 @@ const connectDB = require('./config/connectDB')
 const router = require('./routes/index')
 const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
-const path = require ('path')
+// const path = require ('path')
 
 
 // const app = express()
